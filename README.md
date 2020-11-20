@@ -17,7 +17,7 @@ Basic CRUD application utilizing a mongodb atlas database for posting, editing, 
 - Test
 
 ### Link to my game:
-https://github.com/Github-Rhodes/Project_2/tree/master/RecipeApp
+https://github.com/Github-Rhodes/RecipeApp
 
 ### Unsolved Problems:
 - Having issue deploying to Heroku referencing build-packs
