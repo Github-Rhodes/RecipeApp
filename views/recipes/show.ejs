@@ -1,0 +1,40 @@
+<%- include ("../partials/header") %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">
+        <%= recipe.title %>
+    </div>
+    <div class="ui top attatched">
+        <div class="item">
+            <div class="description">
+                <p><%= recipe.body %></p>
+            </div>
+            <div class="content">
+                <span><%= recipe.dateCreated.toDateString() %></span>
+            </div>
+            <a class="ui orange basic button" href="/recipes/<%= recipe._id %>/edit">Edit</a>
+            <form id="delete" action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
+                <button class="ui red basic button">Delete</button>
+            </form>
+        </div>
+    </div>
+
+    <h3 class="ui header">
+        Reviews
+    </h3>
+    <a class="ui red basic button" href="/recipes/<%= recipe._id %>/comments/new">Add Review</a>
+    <div class="ui celled list">     
+    <% recipe.comments.forEach(function(comment){ %>
+        <div class="item">
+            <div class="content">
+              <div class="header"><%= comment.author %></div>
+              <%= comment.text %>
+              <br>
+              <%= comment.dateCreated.toDateString() %>
+            </div>
+        </div>
+    <% }) %>
+    </div>
+</div>
+
+<%- include ("../partials/footer") %>

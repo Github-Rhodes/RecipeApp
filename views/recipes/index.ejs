@@ -1,0 +1,26 @@
+<%- include ("../partials/header") %>
+
+<div id="marginTop" class="ui main text container">
+    <div class="ui huge header">Recipe App</div>
+        <div class="ui top attached segment">
+            <div class="ui divided items">
+                <% recipeList.forEach(function(recipe){ %>
+                    <div class="item">
+                        <div class="content">
+                            <div class="extra">
+                                <a href="/recipes/<%= recipe._id %>"><h2><%= recipe.title %></h2></a>
+                            </div>
+                            <div class="meta">
+                                <span>
+                                    <p><%= recipe.dateCreated.toDateString()%><p>
+                                </span>
+                            </div>
+                            <div class="description"></div>
+                            <a id="paddings" class="ui floated basic violet button"href="/recipes/<%= recipe._id %>">Read More<a>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+</div>
+<%- include ("../partials/footer") %>

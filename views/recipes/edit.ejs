@@ -1,0 +1,21 @@
+<%- include ("../partials/header") %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">
+        Edit <%= recipe.title %>
+    </div>
+    <form class="ui form" action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="recipe[title]" value="<%= recipe.title %>">
+        </div>
+        <div class="field">
+            <label>Recipe</label>
+            <textarea wrap="hard" name="recipe[body]"><%= recipe.body %></textarea>
+        </div>
+       
+        <input class="ui blue big basic button" type="submit">
+    </form>
+</div>
+
+<%- include ("../partials/footer") %>

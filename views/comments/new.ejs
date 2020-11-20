@@ -1,0 +1,21 @@
+<%- include ("../partials/header") %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">
+        Add New Comment to <%= recipe.title %>
+    </div>
+    <form class="ui form" action="/recipes/<%= recipe._id %>/comments" method="POST">
+        <div class="field">
+            <label>Author Name</label>
+            <input type="text" name="comment[author]" placeholder="Name of author">
+        </div>
+        <div class="field">
+            <label>Comment</label>
+            <textarea wrap="hard" name="comment[text]"></textarea>
+        </div>
+       
+        <input class="ui blue big basic button" type="submit">
+    </form>
+</div>
+
+<%- include ("../partials/footer") %>
