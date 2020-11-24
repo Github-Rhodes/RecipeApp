@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3000;
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/'+ `recipeapp`;
 
-mongoose.connect(MONGODB_URI ,  { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(MONGODB_URI,  { useNewUrlParser: true, useUnifiedTopology: true});
 
 // Error / success
 db.on('error', (err) => console.log(err.message + 'is Mongod not running?'));
