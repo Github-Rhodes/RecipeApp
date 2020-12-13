@@ -16,7 +16,7 @@ Basic CRUD application utilizing a mongodb atlas database for posting, editing, 
 - Build Use, Get, Post, and Delete routes
 - Test
 
-### Link to my game:
+### Link to app:
 https://github.com/Github-Rhodes/RecipeApp
 
 ### Unsolved Problems:
