@@ -8,8 +8,6 @@ Basic CRUD application utilizing a mongodb atlas database for posting, editing, 
 2. EJS
 3. MongoDB Atlas
 4. Express
-5. Express-Sanitizer
-6. Method-Override
 
 ### Approach:
 - Test local server
